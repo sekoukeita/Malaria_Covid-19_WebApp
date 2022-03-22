@@ -1,0 +1,48 @@
+
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+.nav-bar{
+   display: flex;
+   flex-direction: row;
+   background-color: rgb(92, 92, 92);
+   justify-content: start;
+   align-items: center;
+   flex-flow: wrap;
+   
+}
+
+.nav-bar a{
+    display: block;
+    text-decoration: none;
+    padding: 1%;
+    color: white;
+    font-size: 18px;
+    flex:auto;
+    text-align: center;
+
+}
+
+.nav-bar a:nth-child(1){
+    flex: 1 1 auto;
+}
+.nav-bar a:nth-child(2){
+    flex: 1 1 auto;
+}
+.nav-bar a:nth-child(3){
+    flex: 1 1 auto;
+}
+
+.nav-bar a:hover{
+    background-color: rgb(52, 53, 50);
+    font-weight: bolder;
+}
+
+.active{
+    background-color: rgb(47, 49, 47);
+    box-shadow: 2px 2px 6 px;
+}
+
+
