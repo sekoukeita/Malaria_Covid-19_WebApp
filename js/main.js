@@ -44,24 +44,22 @@ require(["esri/WebMap", "esri/views/MapView", "esri/widgets/Legend", "esri/widge
         initialMapTogglebtn.title = "Click to display the initial map"; // add a tooltip
 
         // get the top left container elt where the initiale button will be displayed
-        bottomLeftMenuContainer = document.getElementsByClassName("esri-ui-top-left esri-ui-corner")[0];
-        bottomLeftMenuContainer.appendChild(initialMapTogglebtn);
+        topLeftMenuContainer = document.getElementsByClassName("esri-ui-top-left esri-ui-corner")[0];
+        topLeftMenuContainer.appendChild(initialMapTogglebtn);
 
         // Add monovariate button
         let monovariateTogglebtn = document.createElement("button");
         monovariateTogglebtn.className = "esri-component esri-home esri-widget--buttom esri-widget myButton";
         monovariateTogglebtn.innerText = "Monovariate";
         monovariateTogglebtn.title = "Click to display the monovariate map";
-        bottomLeftMenuContainer = document.getElementsByClassName("esri-ui-top-left esri-ui-corner")[0];
-        bottomLeftMenuContainer.appendChild(monovariateTogglebtn);
+        topLeftMenuContainer.appendChild(monovariateTogglebtn);
 
         // Add bivariate button
         let bivariateTogglebtn = document.createElement("button");
         bivariateTogglebtn.className = "esri-component esri-home esri-widget--buttom esri-widget myButton";
         bivariateTogglebtn.innerText = "Bivariate";
         bivariateTogglebtn.title = "Click to display the bivariate map";
-        bottomLeftMenuContainer = document.getElementsByClassName("esri-ui-top-left esri-ui-corner")[0];
-        bottomLeftMenuContainer.appendChild(bivariateTogglebtn);
+        topLeftMenuContainer.appendChild(bivariateTogglebtn);
 
         // Define the 3 layers to use in the maps after checking their index in the developer tools with the object: map.layers
         const bivariateMortalityRate = map.layers.getItemAt(5);
@@ -101,7 +99,6 @@ require(["esri/WebMap", "esri/views/MapView", "esri/widgets/Legend", "esri/widge
         legendTogglebtn.className = "esri-component esri-home esri-widget--buttom esri-widget myButton";
         legendTogglebtn.innerText = "Legend";
         legendTogglebtn.title = "Click to toggle the legend widget"
-        bottomLeftMenuContainer = document.getElementsByClassName("esri-ui-bottom-left esri-ui-corner")[0];
         bottomLeftMenuContainer.appendChild(legendTogglebtn);
 
         let legendIsVisible = false; 
